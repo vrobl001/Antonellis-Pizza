@@ -13,8 +13,14 @@ const userSchema = new Schema({
     address: String,
     apt: String,
     city: String,
-    state: String,
-    zip: Number,
+    state: {
+        type: String,
+        default: "VA"
+    },
+    zip: {
+        type: Number,
+        default: "22079"
+    },
     deliveryNotes: String,
 });
 
