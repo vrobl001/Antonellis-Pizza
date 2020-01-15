@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>Users Index</title>
+</head>
+<body>
+    <h1>Users Index</h1>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Sign-Up Date</th>
+            <th>Address Type</th>
+            <th>Address</th>
+            <th>Delivery Notes</th>
+        </thead>
+        <tbody>
+            <% users.forEach(user => { %>
+                <tr>
+                    <td><%= user.name %></td>
+                    <td><%= user.phone %></td>
+                    <td><%= user.signUpDate %></td>
+                    <td><%= user.addressType%></td>
+                    <td><%= user.address%></td>
+                    <td><%= user.apt%></td>
+                    <td><%= user.city%></td>
+                    <td><%= user.state%></td>
+                    <td><%= user.zip%></td>
+                    <td><%= user.deliveryNotes%></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
