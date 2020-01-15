@@ -2,6 +2,7 @@
 const express = require('express');
 const port = 3000;
 const logger = require('morgan');
+const indexRouter = require('./routes/index');
 
 // Set up express app
 const app = express();
@@ -19,7 +20,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Mount Routes app.use()
-
+app.use('/', indexRouter);
 
 // Tell app to listen
 app.listen(port, () => {
