@@ -13,3 +13,6 @@ const userSchema = new Schema({
     zip: Number,
     deliveryNotes: String,
 });
+
+// Compile the schema into a model and export it
+module.exports = mongoose.model('User', userSchema);
