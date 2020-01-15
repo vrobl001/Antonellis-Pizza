@@ -22,6 +22,8 @@ const userSchema = new Schema({
         default: "22079"
     },
     deliveryNotes: String,
+}, {
+    timestamps: true
 });
 
 // Compile the schema into a model and export it
