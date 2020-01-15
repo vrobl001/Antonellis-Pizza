@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/userInfo', {
+mongoose.connect(process.env.DATABASE_URL || 'mongodb://localhost/userInfo', {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
 });
 
-// shortcut to mongoose.connection object
+// Event listener to see if connection is made
 const db = mongoose.connection;
 
 db.on('connected', function() {
