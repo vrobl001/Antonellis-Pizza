@@ -2,7 +2,16 @@ const User = require('../models/user');
 
 module.exports = {
     new: newUser,
-    create
+    create,
+    index
+}
+
+function index(req, res) {
+    User.find({}, function(err, users) {
+        res.render('users/index', {
+            users
+        });
+    });
 }
 
 function create(req, res) {
