@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>Antonelli's User Info</title>
+</head>
+<body>
+<h2>Enter User Info</h2>
+<form action="/users" method="POST">
+  <label>Name:
+   <input type="text" name="name">
+  </label>
+  <label>Phone Number:
+   <input type="number" name="phone">
+  </label>
+  <label>Sign-Up Date:
+   <input type="datetime-local" name="signUpDate">
+  </label>
+  <label>Address Name:
+   <input type="text" name="addressName">
+  </label>
+  <label>Address Type:
+   <input type="text" name="addressType">
+  </label>
+  <label>Address:
+   <input type="text" name="addressType">
+  </label>
+  <label>Apt/Suite:
+   <input type="text" name="apt">
+  </label>
+  <label>City:
+   <input type="text" name="city">
+  </label>
+  <label>State:
+   <input type="text" name="state">
+  </label>
+  <label>Zip Code:
+   <input type="number" name="zip">
+  </label>
+  <label>Delivery Notes:
+   <input type="text" name="deliveryNotes">
+  </label>
+  <input type="submit" value="Update User Info">
+</form>
+</body>
+</html>
