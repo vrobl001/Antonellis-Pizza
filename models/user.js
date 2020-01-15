@@ -9,7 +9,10 @@ const userSchema = new Schema({
         default: Date.now
     },
     addressName: String,
-    addressType: String,
+    addressType: {
+        type: String,
+        enum: ['Residence', 'Business', 'Hotel', 'School']
+    },
     address: String,
     apt: String,
     city: String,
