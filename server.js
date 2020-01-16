@@ -1,7 +1,10 @@
 // Require Modules
 const express = require('express');
-const port = 3000;
+const port = process.env.PORT || 3000;
 const logger = require('morgan');
+const session = require('express-session');
+const passport = require('passport');
+const methodOverride = require('method-override');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 
