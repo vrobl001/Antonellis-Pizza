@@ -16,6 +16,7 @@ const app = express();
 
 // Connect to DB
 require('./config/database');
+require('./config/passport');
 
 // Configure Express App app.set()
 app.set('view engine', 'ejs');
