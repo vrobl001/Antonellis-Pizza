@@ -1,8 +1,20 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const factSchema = new mongoose.Schema({
+    text: {
+        type: String,
+        required: true
+    }
+    }, {
+    timestamps: true
+    });
+
 const userSchema = new Schema({
     name: String,
+    email: String,
+    avatarURL: String,
+    facts: [factSchema],
     phone: Number,
     signUpDate: {
         type: Date,
