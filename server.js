@@ -24,7 +24,14 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(express.static('public'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
+app.use(session({
+    secret: 'LJDBxZ82Gsrx5o5OabC7rLTp',
+    resave: false,
+    saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Mount Routes app.use()
 app.use('/', indexRouter);
