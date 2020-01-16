@@ -22,6 +22,7 @@ const userSchema = new Schema({
         default: "22079"
     },
     deliveryNotes: String,
+    googleId: String
 }, {
     timestamps: true
 });
