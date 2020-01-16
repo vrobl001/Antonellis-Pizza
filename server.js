@@ -41,6 +41,4 @@ app.use('/', indexRoutes);
 app.use('/', usersRoutes);
 
 // Tell app to listen
-app.listen(port, () => {
-    console.log(`Express is listening on port:${port}`);
-});
+app.listen(process.env.PORT, '0.0.0.0')
