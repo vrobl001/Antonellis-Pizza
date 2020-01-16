@@ -10,18 +10,19 @@ router.get('/', function(req, res) {
 });
 
 router.get('/', indexCtrl.index);
+
 router.get('/auth/google', passport.authenticate(
     'google',
-    { scope: ['profile', 'email', 'https://www.googleapis.com/auth/user.phonenumbers.read'] }
+    { scope: ['profile', 'email'] }
   ));
  
 // Google OAuth callback route  
 router.get('/oauth2callback', passport.authenticate(
 'google',
-{
+  {
     successRedirect : '/users',
     failureRedirect : '/'
-}
+  }
 ));
 
 // OAuth logout route
