@@ -1,12 +1,12 @@
 // Require Modules
 const express = require('express');
-const port = process.env.PORT || 3000;
 const logger = require('morgan');
 const session = require('express-session');
 const passport = require('passport');
 const methodOverride = require('method-override');
-const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
+const indexRoutes = require('./routes/index');
+const usersRoutes = require('./routes/users');
+const port = process.env.PORT || 3000;
 
 // Load the env vars
 require('dotenv').config();
@@ -26,17 +26,19 @@ app.use(logger('dev'));
 app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
 app.use(session({
     secret: 'LJDBxZ82Gsrx5o5OabC7rLTp',
     resave: false,
     saveUninitialized: true
 }));
+
 app.use(passport.initialize());
 app.use(passport.session());
 
 // Mount Routes app.use()
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/', indexRoutes);
+app.use('/', usersRoutes);
 
 // Tell app to listen
 app.listen(port, () => {
