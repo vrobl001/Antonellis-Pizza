@@ -5,7 +5,7 @@ const session = require('express-session');
 const passport = require('passport');
 const methodOverride = require('method-override');
 const indexRoutes = require('./routes/index');
-const usersRoutes = require('./routes/users');
+const customersRoutes = require('./routes/customers');
 const port = process.env.PORT || 3000;
 
 // Load the env vars
@@ -38,7 +38,7 @@ app.use(passport.session());
 
 // Mount Routes app.use()
 app.use('/', indexRoutes);
-app.use('/', usersRoutes);
+app.use('/', customersRoutes);
 
 // Tell app to listen
 app.listen(port, '0.0.0.0')

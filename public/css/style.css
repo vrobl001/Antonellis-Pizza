@@ -22,7 +22,7 @@ body {
     padding-top: 5px;
 }
 
-.user-navigation {
+.customer-navigation {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -57,8 +57,12 @@ body {
     background-color: rgb(145, 42, 43);
     padding: 10px;
     font-size: 40px;
-    margin-right: 5px;
+    margin-right: 10px;
     margin-left: 5px;
+}
+
+.button:hover {
+    background-color: rgb(97, 26, 27);
 }
 
 .sidebar {
@@ -183,4 +187,9 @@ h3 {
 
 .r-text {
     color: rgb(145, 42, 43);
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }

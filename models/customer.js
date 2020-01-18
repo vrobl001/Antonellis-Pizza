@@ -1,20 +1,10 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const factSchema = new mongoose.Schema({
-    text: {
-        type: String,
-        required: true
-    }
-    }, {
-    timestamps: true
-    });
-
-const userSchema = new Schema({
+const customerSchema = new Schema({
     name: String,
     email: String,
     avatarURL: String,
-    facts: [factSchema],
     phone: Number,
     signUpDate: {
         type: Date,
@@ -22,7 +12,7 @@ const userSchema = new Schema({
     },
     addressName: String,
     addressT: String, 
-    address: String,
+    location: String,
     apt: String,
     city: String,
     state: {
@@ -40,4 +30,4 @@ const userSchema = new Schema({
 });
 
 // Compile the schema into a model and export it
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('Customer', customerSchema);

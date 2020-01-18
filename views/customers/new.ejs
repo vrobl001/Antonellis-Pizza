@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/public/css/style.css">
-    <title>Antonelli's User Info</title>
+    <title>Antonelli's Customer Info</title>
 </head>
 <body>
-<h2>Enter User Info</h2>
-<form action="/users" method="POST">
+<h2>Enter Customer Info</h2>
+<form action="/customers" method="POST">
   <label>Name:
    <input type="text" name="name">
   </label>
@@ -28,7 +28,7 @@
       </select>
   </label>
   <label>Address:
-   <input type="text" name="addressType">
+   <input type="text" name="location">
   </label>
   <label>Apt/Suite:
    <input type="text" name="apt">
@@ -45,7 +45,7 @@
   <label>Delivery Notes:
    <input type="text" name="deliveryNotes">
   </label>
-  <input type="submit" value="Update User Info">
+  <input type="submit" value="Update Customer Info">
 </form>
 </body>
 </html>

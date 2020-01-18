@@ -3,9 +3,9 @@ module.exports = {
 }
 
 function index(req, res, next) {
-    User.find({}, function(err, users) {
-     res.render('users/index', {
-      users,
+    Customer.find({}, function(err, customers) {
+     res.render('customers/index', {
+      customers,
       user: req.user
       });
    })
