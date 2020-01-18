@@ -4,66 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Berkshire+Swash&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="/public/css/style.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script defer src="/js/script.js"></script>
     <title>Antonelli's Pizza & Subs</title>
-      <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">
-  <!-- Materialize Icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Materialize CSS Framework -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="/css/style.css" />
-  <!-- JavaScript for Materialize -->
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 <body>
-    <a href="" class="brand-logo left">Brand Logo</a>
-    <ul class="right">
-        <li><a href="/">Home</a></li>
-        <li><a href="/users">See All Users</a></li>
-      <li>
-      <% if (user) { %>
-          <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
-      <% } else { %>
-          <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
-      <% } %>
-      </li>
-  </ul>
-    <h1>Antonelli's Pizza</h1>
-    <div class="navigation">
-        <ul>
-            <li>Home</li>
-            <li>Menu</li>
-            <li>Catering</li>
-            <li>Coupons</li>
-            <li>Order Online</li>
+    <div class="brand-logo">
+        <img src="https://i.imgur.com/0vEmsCf.png" style="height:130px;"></a>
+    </div>
+    <div class="user-navigation">
+        <ul class="user-buttons">
+                <li><a href="/">Home</a></li>
+                <li><a href="/users">See All Users</a></li>
+            <li>
+            <% if (user) { %>
+                <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
+            <% } else { %>
+                <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+            <% } %>
+            </li>
         </ul>
+    </div>
+    <div class="site-navigation">
+        <ul class="site-buttons">
+            <li class="button">HOME</li>
+            <li class="button">MENU</li>
+            <li class="button">CATERING</li>
+            <li class="button">COUPONS</li>
+            <li class="button">ORDER ONLINE</li>
+        </ul>
+    </div>
+    <div class="sidebar">
+        <div class="intro">
+            <h3 class="berkshire" id="welcomeTitle">Welcome to Antonelli's</h3 id="welcomeTitle">
+            <p>Antonelli’s, a family owned & operated establishment which opened in 2007, prides itself in serving the finest meals using the freshest ingredients always; some of which include extra virgin olive oil, freshly sliced meats, romaine lettuce for all of our salads, and Grande© cheese, the most expensive cheese in the market. In addition, we provide our customers with very generous portions, and offer the superior service that you may fail to receive when ordering from a chain. "From our sauces, to pizza dough, to select dressings and desserts-all made from scratch; we offer an exceptional tasting home-made meal that’s made away from home."</p>
+        </div>
+        <div class="hours">
+            <h2 class="r-text">HOURS</h2>
+            <h5>Sun-Thurs: 11am-10pm</h5>
+            <h5>Fri & Sat: 11am-11pm</h5>
+            <ul>
+                <li>Last order 15 minutes before closing</li>
+                <li>$10.00 minimum for delivery</li>
+                <li>Delivery charge may apply</li>
+            </ul>
+        </div>
+        <div class="contact">
+            <h5 class="berkshire">Antonelli's would love to hear from you!</h5>
+            <p class="r-text">Please feel free to submit questions, compliments, suggestions, or complaints to antonellis-pizza@hotmail.com</p>
+            <h5 clas="r-text">703-690-4500</h5>
+        </div>
     </div>
     <div class="store-info">
-        <h2>703-690-4500</h2>
-        <h3>8212 Gunston Corner Lane | Lorton, VA 22079</h3>
-        <h2>Carry-Out | Dine-In | Delivery</h2>
-        <h4>Find Us!</h4>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="https://antonellis-pizza.com/wp-content/uploads/2013/08/antonellis-pizza-carry-out-dine-in-delivery-pizza-link-820x450.jpg" style="width:800px">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://antonellis-pizza.com/wp-content/uploads/2013/08/antonellis-pizza-carry-out-dine-in-delivery-submarine-sandwich-hoagies-grinders.jpg" style="width:800px">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://antonellis-pizza.com/wp-content/uploads/2013/08/antonellis-pizza-carry-out-dine-in-delivery-pepperoni-pizza.jpg" style="width:800px">
+            </div>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>
+        <div class="contact-info">
+            <h2 class="r-text">703-690-4500</h2>
+            <h3>8212 Gunston Corner Lane | Lorton, VA 22079</h3>
+            <h2 class="r-text">Carry-Out | Dine-In | Delivery</h2>
+            <h4 class="r-text">Find Us!</h4>
+        </div>
+            <div class="map">
+                <iframe src="https://maps.google.com/maps?q=8212+Gunston+Corner+Lane+Lorton,+VA+22079&amp;hl=en&amp;sll=38.705364,-77.22862&amp;sspn=0.010583,0.026157&amp;hnear=8212+Gunston+Corner+Ln,+Lorton,+Virginia+22079&amp;t=m&amp;ie=UTF8&amp;hq=&amp;ll=38.705339,-77.228651&amp;spn=0.038513,0.036478&amp;z=14&amp;iwloc=A&amp;output=embed" width="425" height="575" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+            </div>
     </div>
-    <div class="intro">
-        <h3>Welcome to Antonelli's</h3>
-        <p>Antonelli’s, a family owned & operated establishment which opened in 2007, prides itself in serving the finest meals using the freshest ingredients always; some of which include extra virgin olive oil, freshly sliced meats, romaine lettuce for all of our salads, and Grande© cheese, the most expensive cheese in the market. In addition, we provide our customers with very generous portions, and offer the superior service that you may fail to receive when ordering from a chain. "From our sauces, to pizza dough, to select dressings and desserts-all made from scratch; we offer an exceptional tasting home-made meal that’s made away from home."</p>
-    </div>
-    <div class="hours">
-        <h2>HOURS</h2>
-        <h4>Sun-Thurs: 11am-10pm</h4>
-        <h4>Fri & Sat: 11am-11pm</h4>
-        <ul>
-            <li>Last order 15 minutes before closing</li>
-            <li>$10.00 minimum for delivery</li>
-            <li>Delivery charge may apply</li>
-        </ul>
-    </div>
-    <div class="contact">
-        <h3>Antonelli's would love to hear from you!</h3>
-        <p>Please feel free to submit questions, compliments, suggestions, or complaints to antonellis-pizza@hotmail.com</p>
-        <h5>703-690-4500</h5>
+    <div class="filler"></div>
+    <div class="footer">
+        <p>Prices & menu subject to change without notice.<br>Copyright © Antonelli's | Site design & images copyright © Grande Cheese Company. All rights reserved.</p>
     </div>
 </body>
 </html>

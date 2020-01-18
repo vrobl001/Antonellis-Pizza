@@ -41,4 +41,4 @@ app.use('/', indexRoutes);
 app.use('/', usersRoutes);
 
 // Tell app to listen
-app.listen(process.env.PORT, '0.0.0.0')
+app.listen(port, '0.0.0.0')
