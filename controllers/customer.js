@@ -47,12 +47,11 @@ function index(req, res) {
 }
 
 function create(req, res) {
-    Customer.findById(req.params.id, function(err, customer) {
-        customer.reviews.push(req.body);
-        customer.save(function(err) {
-          res.redirect(`/customers/${customer._id}`);
-        });
-      });
+    const customer = new Customer(req.body);
+    customer.save(function(err) {
+        if(err) return res.render('customers/new');
+        res.redirect('/customers');
+    });
 }
 
 function newCustomer(req, res) {
