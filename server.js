@@ -36,6 +36,8 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use(methodOverride('_method'));
+
 // Mount Routes app.use()
 app.use('/', indexRoutes);
 app.use('/', customersRoutes);
