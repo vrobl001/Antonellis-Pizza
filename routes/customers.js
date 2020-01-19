@@ -5,10 +5,10 @@ const customersCtrl = require('../controllers/customer');
 // GET /customers/new
 router.get('/', customersCtrl.index);
 router.get('/new', customersCtrl.new);
-router.post('/customers', customersCtrl.create);
-router.get('/customers', isLoggedIn, customersCtrl.index);
-router.put('/:id', customersCtrl.update);
-router.get('/:id/edit',  customersCtrl.edit); //isLoggedIn
+router.post('/', customersCtrl.create);
+
+router.put('/:id', isLoggedIn, customersCtrl.update);
+router.get('/:id/edit', isLoggedIn,  customersCtrl.edit); 
 
 // Update
 

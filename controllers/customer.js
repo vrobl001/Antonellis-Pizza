@@ -10,7 +10,6 @@ module.exports = {
 
 function update(req, res) {
     Customer.findById(req.params.id, function(err, customer) {
-        customer._id = req.params._id
         customer.name = req.body.name
         customer.email = req.body.email
         customer.phone = req.body.phone
@@ -22,8 +21,8 @@ function update(req, res) {
         customer.state = req.body.state
         customer.zip = req.body.zip
         customer.deliveryNotes = req.body.deliveryNotes
-        console.log(customer)
-        customer.save(function(err) {
+        customer.save(function(err, customer) {
+            console.log(customer)
             if(err) return res.redirect('customers/edit', { customer: customer, error: err });
             res.render('customers/edit', { customer: customer });
         });

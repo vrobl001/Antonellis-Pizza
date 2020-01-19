@@ -40,7 +40,7 @@ app.use(methodOverride('_method'));
 
 // Mount Routes app.use()
 app.use('/', indexRoutes);
-app.use('/', customersRoutes);
+app.use('/customers', customersRoutes);
 
 // Tell app to listen
 app.listen(port, '0.0.0.0')

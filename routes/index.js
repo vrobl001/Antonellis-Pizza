@@ -3,12 +3,6 @@ const router = express.Router();
 const passport = require('passport');
 const indexCtrl = require('../controllers/index');
 
-router.get('/', function(req, res) {
-  res.render('index', {
-	  user: req.user
-  });
-});
-
 router.get('/', indexCtrl.index);
 
 router.get('/auth/google', passport.authenticate(
@@ -20,7 +14,7 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
 'google',
   {
-    successRedirect : 'customer/edit',
+    successRedirect : '/',
     failureRedirect : '/'
   }
 ));
