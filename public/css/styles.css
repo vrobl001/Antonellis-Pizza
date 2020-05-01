@@ -1,0 +1,84 @@
+.app-outer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.app-outer-container .app-inner-container {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: teal;
+}
+
+.app-outer-container .app-inner-container .sidebar,
+.app-outer-container .app-inner-container .store-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  height: 8rem;
+}
+
+.navbar .upper-nav,
+.navbar .lower-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .upper-nav {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 4rem;
+}
+
+.navbar .lower-nav {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 4rem;
+  background-color: black;
+}
+
+.navbar .lower-nav .button {
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: black;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.navbar .lower-nav .button:hover {
+  background-color: rgba(100, 100, 100, 0.1);
+}
+/*# sourceMappingURL=styles.css.map */

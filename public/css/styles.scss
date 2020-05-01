@@ -1,0 +1,51 @@
+.app-outer-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  .app-inner-container {
+    flex-grow: 1;
+    background-color: teal;
+    .sidebar,
+    .store-info {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  height: 8rem;
+  .upper-nav,
+  .lower-nav {
+    display: flex;
+    width: 100%;
+    list-style: none;
+    align-items: center;
+  }
+  .upper-nav {
+    justify-content: space-between;
+    height: 4rem;
+  }
+  .lower-nav {
+    justify-content: space-evenly;
+    height: 4rem;
+    background-color: black;
+    .button {
+      cursor: pointer;
+      padding: 0.5rem;
+      background-color: black;
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+      width: 100%;
+      &:hover {
+        background-color: rgba(100, 100, 100, 0.1);
+      }
+    }
+  }
+}
