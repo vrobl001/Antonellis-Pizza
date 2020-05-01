@@ -41,6 +41,9 @@ $colors: (
   a {
     color: white;
     margin: 1rem;
+    &:hover {
+      text-decoration: none;
+    }
   }
   img {
     position: absolute;
@@ -78,6 +81,7 @@ $colors: (
         width: 20rem;
         &:hover {
           background-color: rgba(100, 100, 100, 0.2);
+          font-size: 2.1rem;
         }
       }
     }
