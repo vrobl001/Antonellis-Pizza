@@ -85,8 +85,9 @@ $colors: (
 }
 
 .sidebar {
-  width: 20rem;
+  width: 25rem;
   padding: 1rem;
+  justify-content: space-evenly;
   h4 {
     font-family: 'Berkshire Swash', cursive;
     color: color(green);
@@ -128,6 +129,10 @@ $colors: (
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    iframe {
+      width: 500;
+      height: 500;
+    }
   }
 }
 
@@ -140,5 +145,15 @@ $colors: (
   color: white;
   p {
     margin: 0;
+  }
+}
+
+.slideshow {
+  margin: 1rem;
+  img {
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    width: 40rem;
+    height: 20rem;
   }
 }
