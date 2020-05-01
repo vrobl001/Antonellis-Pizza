@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/public/css/style.css" />
     <title>Antonelli's Pizza & Subs</title>
     <link
-      href="https://fonts.googleapis.com/css?family=Baloo&display=swap"
+      href="https://fonts.googleapis.com/css?family=Baloo|Berkshire+Swash&display=swap"
       rel="stylesheet"
     />
     <link
@@ -33,7 +33,9 @@
   <body>
     <div class="navbar">
       <div class="upper-nav">
-        <a href="/" class="brand-logo left">Brand Logo</a>
+        <a href="/" class="brand-logo">
+          <img src="https://i.imgur.com/0vEmsCf.png"></a>
+        </a>
         <li>
           <% if (user) { %>
           <a href="/logout"
@@ -48,11 +50,14 @@
       </div>
 
       <div class="lower-nav">
-        <li class="button">Home</li>
-        <li class="button">Menu</li>
-        <li class="button">Catering</li>
-        <li class="button">Coupons</li>
-        <li class="button">Order Online</li>
+        <div class="button-container">
+          <li class="button">Home</li>
+          <li class="button">Menu</li>
+          <li class="button">Catering</li>
+          <li class="button">Coupons</li>
+          <li class="button">Order Online</li>
+
+        </div>
       </div>
     </div>
   </body>
