@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>Customers Edit</title>
+      <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">
+  <!-- Materialize Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Materialize CSS Framework -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="/css/style.css" />
+  <!-- JavaScript for Materialize -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <h1>Customers Edit</h1>
+    <form action="/5e230ea82fc7c4077cc9c115?_method=PUT" method="POST">
+      <label>Name:
+       <input type="text" name="name" placeholder="" value="">
+      </label>
+      <label>E-mail:
+       <input type="text" name="email" placeholder="" value="">
+      </label>
+      <label>Phone Number:
+       <input type="number" name="phone" placeholder="" value="">
+      </label>
+      <label>Address Name:
+       <input type="text" name="addressName" placeholder="" value="">
+      </label>
+      <label>Address Type:
+        <select name="addressT" placeholder="" value="">
+          <option value="Residence">Residence</option>
+          <option value="Business">Business</option>
+          <option value="Hotel">Hotel</option>
+          <option value="School">School</option>
+        </select>
+      </label>
+      <label>Address:
+       <input type="text" name="location" placeholder="" value="">
+      </label>
+      <label>Apt/Suite:
+       <input type="text" name="apt" placeholder="" value="">
+      </label>
+      <label>City:
+       <input type="text" name="city" placeholder="" value="">
+      </label>
+      <label>State:
+       <input type="text" name="state" placeholder="" value="">
+      </label>
+      <label>Zip Code:
+       <input type="number" name="zip" placeholder="" value="">
+      </label>
+      <label>Delivery Notes:
+       <input type="text" name="deliveryNotes" placeholder="" value="">
+      </label>
+      <input type="submit" value="Update Customer Info">
+    </form>
+
+</body>
+</html>

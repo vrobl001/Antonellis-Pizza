@@ -1,40 +1,96 @@
-<%- include('../partials/header') %>
-<div class="store-info">
-  <h2>703-690-4500</h2>
-  <h3>8212 Gunston Corner Lane | Lorton, VA 22079</h3>
-  <h2>Carry-Out | Dine-In | Delivery</h2>
-  <h4>Find Us!</h4>
-</div>
-<div class="intro">
-  <h3>Welcome to Antonelli's</h3>
-  <p>
-    Antonelli’s, a family owned & operated establishment which opened in 2007,
-    prides itself in serving the finest meals using the freshest ingredients
-    always; some of which include extra virgin olive oil, freshly sliced meats,
-    romaine lettuce for all of our salads, and Grande© cheese, the most
-    expensive cheese in the market. In addition, we provide our customers with
-    very generous portions, and offer the superior service that you may fail to
-    receive when ordering from a chain. "From our sauces, to pizza dough, to
-    select dressings and desserts-all made from scratch; we offer an exceptional
-    tasting home-made meal that’s made away from home."
-  </p>
-</div>
-<div class="hours">
-  <h2>HOURS</h2>
-  <h4>Sun-Thurs: 11am-10pm</h4>
-  <h4>Fri & Sat: 11am-11pm</h4>
-  <ul>
-    <li>Last order 15 minutes before closing</li>
-    <li>$10.00 minimum for delivery</li>
-    <li>Delivery charge may apply</li>
-  </ul>
-</div>
-<div class="contact">
-  <h3>Antonelli's would love to hear from you!</h3>
-  <p>
-    Please feel free to submit questions, compliments, suggestions, or
-    complaints to antonellis-pizza@hotmail.com
-  </p>
-  <h5>703-690-4500</h5>
-</div>
-<%- include('../partials/header') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Berkshire+Swash&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/style.css" />
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script defer src="/js/script.js"></script>
+    <link rel="icon" href="https://antonellis-pizza.com/wp-content/themes/Antonellis/images/favicon.ico">
+    <title>Antonelli's Pizza & Subs</title>
+</head>
+<body>
+    <div class="brand-logo">
+        <img src="https://i.imgur.com/0vEmsCf.png" style="height:130px;"></a>
+    </div>
+    <div class="customer-navigation">
+        <ul>
+            <li><a href="customers/edit">Edit Account info</a></li>
+            <li>
+            <% if (user) { %>
+                <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
+            <% } else { %>
+                <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+            <% } %>
+            </li>
+        </ul>
+    </div>
+    <div class="site-navigation">
+        <ul class="site-buttons">
+            <li class="button"><a href="/">HOME</a></li>
+            <li class="button"><a href="menu/menu.ejs">MENU</a></li>
+            <li class="button"><a>CATERING</a></li>
+            <li class="button"><a>COUPONS</a></li>
+            <li class="button"><a>ORDER ONLINE</a></li>
+        </ul>
+    </div>
+    <div class="sidebar">
+        <div class="intro">
+            <h3 class="berkshire" id="welcomeTitle">Welcome to Antonelli's</h3 id="welcomeTitle">
+            <p>Antonelli’s, a family owned & operated establishment which opened in 2007, prides itself in serving the finest meals using the freshest ingredients always; some of which include extra virgin olive oil, freshly sliced meats, romaine lettuce for all of our salads, and Grande© cheese, the most expensive cheese in the market. In addition, we provide our customers with very generous portions, and offer the superior service that you may fail to receive when ordering from a chain. "From our sauces, to pizza dough, to select dressings and desserts-all made from scratch; we offer an exceptional tasting home-made meal that’s made away from home."</p>
+        </div>
+        <div class="hours">
+            <h2 class="r-text">HOURS</h2>
+            <h5>Sun-Thurs: 11am-10pm</h5>
+            <h5>Fri & Sat: 11am-11pm</h5>
+            <ul>
+                <li>Last order 15 minutes before closing</li>
+                <li>$10.00 minimum for delivery</li>
+                <li>Delivery charge may apply</li>
+            </ul>
+        </div>
+        <div class="contact">
+            <h5 class="berkshire">Antonelli's would love to hear from you!</h5>
+            <p class="r-text">Please feel free to submit questions, compliments, suggestions, or complaints to antonellis-pizza@hotmail.com</p>
+            <h5 clas="r-text">703-690-4500</h5>
+        </div>
+    </div>
+    <div class="store-info">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="https://antonellis-pizza.com/wp-content/uploads/2013/08/antonellis-pizza-carry-out-dine-in-delivery-pizza-link-820x450.jpg" style="width:800px">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://antonellis-pizza.com/wp-content/uploads/2013/08/antonellis-pizza-carry-out-dine-in-delivery-submarine-sandwich-hoagies-grinders.jpg" style="width:800px">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://antonellis-pizza.com/wp-content/uploads/2013/08/antonellis-pizza-carry-out-dine-in-delivery-pepperoni-pizza.jpg" style="width:800px">
+            </div>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>
+        <div class="contact-info">
+            <h2 class="r-text">703-690-4500</h2>
+            <h3>8212 Gunston Corner Lane | Lorton, VA 22079</h3>
+            <h2 class="r-text">Carry-Out | Dine-In | Delivery</h2>
+            <h4 class="r-text">Find Us!</h4>
+        </div>
+            <div class="map">
+                <iframe src="https://maps.google.com/maps?q=8212+Gunston+Corner+Lane+Lorton,+VA+22079&amp;hl=en&amp;sll=38.705364,-77.22862&amp;sspn=0.010583,0.026157&amp;hnear=8212+Gunston+Corner+Ln,+Lorton,+Virginia+22079&amp;t=m&amp;ie=UTF8&amp;hq=&amp;ll=38.705339,-77.228651&amp;spn=0.038513,0.036478&amp;z=14&amp;iwloc=A&amp;output=embed" width="425" height="575" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+            </div>
+            <div class="larger-map"><a href="https://www.google.com/maps/place/8212+Gunston+Corner+Ln,+Lorton,+VA+22079/@38.705339,-77.228651,14z/data=!4m5!3m4!1s0x89b653635246aaab:0x8c610d549275831e!8m2!3d38.7059792!4d-77.2287723?hl=en">View Larger Map</a></div>
+    </div>
+    <div class="filler"></div>
+    <div class="footer">
+        <p>Prices & menu subject to change without notice.<br>Copyright © Antonelli's | Site design & images copyright © Grande Cheese Company. All rights reserved.</p>
+    </div>
+</body>
+</html>
