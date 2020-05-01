@@ -108,7 +108,7 @@
 }
 
 .sidebar {
-  width: 17.5rem;
+  width: 20rem;
   padding: 1rem;
 }
 
@@ -140,6 +140,36 @@
   border-radius: 1rem;
   -webkit-box-shadow: 0rem 0.1rem 0.25rem 0rem black;
           box-shadow: 0rem 0.1rem 0.25rem 0rem black;
+}
+
+.main-content {
+  width: 100%;
+}
+
+.main-content h3 {
+  color: #912a2b;
+  font-weight: bold;
+}
+
+.main-content h4,
+.main-content h5 {
+  color: #00713e;
+}
+
+.main-content div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer {

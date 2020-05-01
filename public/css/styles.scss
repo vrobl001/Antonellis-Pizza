@@ -85,7 +85,7 @@ $colors: (
 }
 
 .sidebar {
-  width: 17.5rem;
+  width: 20rem;
   padding: 1rem;
   h4 {
     font-family: 'Berkshire Swash', cursive;
@@ -110,6 +110,24 @@ $colors: (
     border: $border;
     border-radius: $border-radius;
     box-shadow: $box-shadow;
+  }
+}
+
+.main-content {
+  width: 100%;
+  h3 {
+    color: color(red);
+    font-weight: bold;
+  }
+  h4,
+  h5 {
+    color: color(green);
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
