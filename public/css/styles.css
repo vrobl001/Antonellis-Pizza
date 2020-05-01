@@ -12,10 +12,13 @@
 }
 
 .app-outer-container .app-inner-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  background-color: teal;
+  background-color: #fbe9ca;
 }
 
 .app-outer-container .app-inner-container .sidebar,
@@ -39,6 +42,20 @@
           flex-direction: column;
   padding: 0;
   height: 8rem;
+  background-color: #912a2b;
+}
+
+.navbar a {
+  color: white;
+  margin: 1rem;
+}
+
+.navbar img {
+  position: absolute;
+  top: 5;
+  left: 0;
+  height: 7.5rem;
+  width: 9rem;
 }
 
 .navbar .upper-nav,
@@ -68,17 +85,79 @@
   background-color: black;
 }
 
-.navbar .lower-nav .button {
+.navbar .lower-nav .button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 15rem;
+}
+
+.navbar .lower-nav .button-container .button {
+  height: 4rem;
   cursor: pointer;
   padding: 0.5rem;
   background-color: black;
   color: white;
   font-size: 2rem;
   text-align: center;
-  width: 100%;
+  width: 20rem;
 }
 
-.navbar .lower-nav .button:hover {
-  background-color: rgba(100, 100, 100, 0.1);
+.navbar .lower-nav .button-container .button:hover {
+  background-color: rgba(100, 100, 100, 0.2);
+}
+
+.sidebar {
+  width: 17.5rem;
+  padding: 1rem;
+}
+
+.sidebar h4 {
+  font-family: 'Berkshire Swash', cursive;
+  color: #00713e;
+  font-size: 2rem;
+}
+
+.sidebar h5 {
+  color: #912a2b;
+  font-weight: bold;
+}
+
+.sidebar h6 {
+  font-weight: bold;
+}
+
+.sidebar p {
+  font-size: 0.9rem;
+}
+
+.sidebar div {
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: white;
+  border: 1px solid #00713e;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0rem 0.1rem 0.25rem 0rem black;
+          box-shadow: 0rem 0.1rem 0.25rem 0rem black;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #912a2b;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.footer p {
+  margin: 0;
 }
 /*# sourceMappingURL=styles.css.map */

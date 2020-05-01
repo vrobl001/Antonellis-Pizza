@@ -1,3 +1,19 @@
+$border-radius: 1rem;
+$border: 1px solid rgb(0, 113, 62);
+$box-shadow: 0rem 0.1rem 0.25rem 0rem black;
+
+$colors: (
+  orange: rgb(222, 143, 34),
+  red: rgb(145, 42, 43),
+  brown: rgb(58, 39, 25),
+  green: rgb(0, 113, 62),
+  tan: rgb(251, 233, 202),
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
 .app-outer-container {
   display: flex;
   flex-direction: column;
@@ -5,8 +21,9 @@
   padding: 0;
   margin: 0;
   .app-inner-container {
+    display: flex;
     flex-grow: 1;
-    background-color: teal;
+    background-color: color(tan);
     .sidebar,
     .store-info {
       display: flex;
@@ -20,6 +37,18 @@
   flex-direction: column;
   padding: 0;
   height: 8rem;
+  background-color: color(red);
+  a {
+    color: white;
+    margin: 1rem;
+  }
+  img {
+    position: absolute;
+    top: 5;
+    left: 0;
+    height: 7.5rem;
+    width: 9rem;
+  }
   .upper-nav,
   .lower-nav {
     display: flex;
@@ -35,17 +64,63 @@
     justify-content: space-evenly;
     height: 4rem;
     background-color: black;
-    .button {
-      cursor: pointer;
-      padding: 0.5rem;
-      background-color: black;
-      color: white;
-      font-size: 2rem;
-      text-align: center;
-      width: 100%;
-      &:hover {
-        background-color: rgba(100, 100, 100, 0.1);
+    .button-container {
+      display: flex;
+      padding-left: 15rem;
+      .button {
+        height: 4rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        background-color: black;
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+        width: 20rem;
+        &:hover {
+          background-color: rgba(100, 100, 100, 0.2);
+        }
       }
     }
+  }
+}
+
+.sidebar {
+  width: 17.5rem;
+  padding: 1rem;
+  h4 {
+    font-family: 'Berkshire Swash', cursive;
+    color: color(green);
+    font-size: 2rem;
+  }
+  h5 {
+    color: color(red);
+    font-weight: bold;
+  }
+  h6 {
+    font-weight: bold;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  div {
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: white;
+    border: $border;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+  }
+}
+
+.footer {
+  display: flex;
+  background-color: color(red);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  p {
+    margin: 0;
   }
 }
