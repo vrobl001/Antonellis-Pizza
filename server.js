@@ -6,6 +6,7 @@ const passport = require('passport');
 const methodOverride = require('method-override');
 const indexRoutes = require('./routes/index');
 const customersRoutes = require('./routes/customers');
+const menuRoutes = require('./routes/menu.js');
 const port = process.env.PORT || 3000;
 
 // Load the env vars
@@ -27,11 +28,13 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(session({
+app.use(
+  session({
     secret: 'LJDBxZ82Gsrx5o5OabC7rLTp',
     resave: false,
-    saveUninitialized: true
-}));
+    saveUninitialized: true,
+  })
+);
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -41,6 +44,7 @@ app.use(methodOverride('_method'));
 // Mount Routes app.use()
 app.use('/', indexRoutes);
 app.use('/', customersRoutes);
+app.use('/menu', menuRoutes);
 
 // Tell app to listen
-app.listen(port, '0.0.0.0')
+app.listen(port, '0.0.0.0');
