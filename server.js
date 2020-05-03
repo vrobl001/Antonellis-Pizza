@@ -6,7 +6,8 @@ const passport = require('passport');
 const methodOverride = require('method-override');
 const indexRoutes = require('./routes/index');
 const customersRoutes = require('./routes/customers');
-const menuRoutes = require('./routes/menu.js');
+const foodsRoutes = require('./routes/foods');
+const menuRoutes = require('./routes/menu');
 const port = process.env.PORT || 3000;
 
 // Load the env vars
@@ -44,6 +45,7 @@ app.use(methodOverride('_method'));
 // Mount Routes app.use()
 app.use('/', indexRoutes);
 app.use('/', customersRoutes);
+app.use('/foods', foodsRoutes);
 app.use('/menu', menuRoutes);
 
 // Tell app to listen
