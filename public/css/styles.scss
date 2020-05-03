@@ -14,6 +14,7 @@ $colors: (
   @return map-get($colors, $color-name);
 }
 
+// boilerplate template
 .app-outer-container {
   display: flex;
   flex-direction: column;
@@ -32,7 +33,10 @@ $colors: (
   }
 }
 
+// navbar
 .navbar {
+  position: sticky;
+  top: 0;
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -88,6 +92,7 @@ $colors: (
   }
 }
 
+// sidebar
 .sidebar {
   width: 25rem;
   padding: 1rem;
@@ -118,6 +123,7 @@ $colors: (
   }
 }
 
+// home page main content
 .main-content {
   width: 100%;
   h3 {
@@ -141,6 +147,7 @@ $colors: (
   }
 }
 
+// footer
 .footer {
   display: flex;
   background-color: color(red);
@@ -153,6 +160,7 @@ $colors: (
   }
 }
 
+// image carousel
 .slideshow {
   margin: 1rem;
   img {
@@ -160,5 +168,56 @@ $colors: (
     box-shadow: $box-shadow;
     width: 40rem;
     height: 20rem;
+  }
+}
+
+// menu page
+.menu-index {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  a {
+    list-style: none;
+    margin: 1rem;
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.5rem;
+    font-weight: bold;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .menu {
+    h4 {
+      font-family: 'Berkshire Swash', cursive;
+      color: color(green);
+    }
+  }
+  .menu-nav-link {
+    position: sticky;
+    top: 130;
+    width: 100rem;
+  }
+  .intro {
+    width: 75rem;
+  }
+
+  .menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+    padding: 1rem;
+    border: $border;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+  }
+
+  .column {
+    flex-direction: column;
   }
 }

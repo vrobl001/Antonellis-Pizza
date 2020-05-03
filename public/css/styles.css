@@ -33,6 +33,9 @@
 }
 
 .navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,5 +218,79 @@
           box-shadow: 0rem 0.1rem 0.25rem 0rem black;
   width: 40rem;
   height: 20rem;
+}
+
+.menu-index {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.menu-index a {
+  list-style: none;
+  margin: 1rem;
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.menu-index a:hover {
+  text-decoration: none;
+}
+
+.menu-index .menu h4 {
+  font-family: 'Berkshire Swash', cursive;
+  color: #00713e;
+}
+
+.menu-index .menu-nav-link {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 130;
+  width: 100rem;
+}
+
+.menu-index .intro {
+  width: 75rem;
+}
+
+.menu-index .menu-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #00713e;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0rem 0.1rem 0.25rem 0rem black;
+          box-shadow: 0rem 0.1rem 0.25rem 0rem black;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: white;
+}
+
+.menu-index .column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 /*# sourceMappingURL=styles.css.map */
