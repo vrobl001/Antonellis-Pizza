@@ -1,0 +1,25 @@
+<div class="app-outer-container">
+  <%- include('./partials/header') %>
+  <div class="app-inner-container">
+    <h1>Foods Edit</h1>
+    <form action="/foods/{{ food.id }}?_method=PUT" method="POST">
+      <label
+        >Name:
+        <input type="text" name="name" placeholder="" value="" />
+      </label>
+
+      <label
+        >Price:
+        <input type="text" name="price" placeholder="" value="" />
+      </label>
+
+      <label
+        >Description:
+        <input type="text" name="description" placeholder="" value="" />
+      </label>
+
+      <input type="submit" value="Update Food Info" />
+    </form>
+  </div>
+  <%- include('./partials/footer') %>
+</div>
