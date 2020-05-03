@@ -1,7 +1,13 @@
+const Food = require('../models/food');
+
 module.exports = {
   index,
 };
 
 function index(req, res) {
-  res.render('menu/index');
+  Food.find({}, function (err, foods) {
+    res.render('menu/index', {
+      foods,
+    });
+  });
 }
