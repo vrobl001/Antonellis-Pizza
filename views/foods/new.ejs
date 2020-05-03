@@ -1,0 +1,26 @@
+<div class="app-outer-container">
+  <%- include('../partials/header') %>
+  <div class="app-inner-container">
+    <h2>Enter Food Info</h2>
+    <form action="/foods" method="POST">
+      <label
+        >Name:
+        <input type="text" name="name" />
+      </label>
+      <label
+        >Category:
+        <input type="text" name="category" />
+      </label>
+      <label
+        >Price:
+        <input type="text" name="price" />
+      </label>
+      <label
+        >Description:
+        <input type="text" name="description" />
+      </label>
+      <input type="submit" value="Submit Info" />
+    </form>
+  </div>
+  <%- include('../partials/footer') %>
+</div>
