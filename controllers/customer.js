@@ -9,35 +9,24 @@ module.exports = {
 };
 
 function update(req, res) {
-  Customer.findById(req.params.id, function (err, customer) {
-    customer._id = req.params._id;
-    customer.name = req.body.name;
-    customer.email = req.body.email;
-    customer.phone = req.body.phone;
-    customer.addressName = req.body.addressName;
-    customer.addressT = req.body.addressT;
-    customer.location = req.body.location;
-    customer.apt = req.body.apt;
-    customer.city = req.body.city;
-    customer.state = req.body.state;
-    customer.zip = req.body.zip;
-    customer.deliveryNotes = req.body.deliveryNotes;
-    customer.save(function (err) {
-      if (err)
-        return res.redirect('customers/edit', {
-          customer: customer,
-          error: err,
-        });
-      res.render('customers/edit', { customer: customer });
-    });
+  customer = Customer.findById(req.params.id);
+  Customer.updateOne(customer, req.body, function (err, customer) {
+    if (err) {
+      return res.redirect('/customers/:id/edit');
+    }
+    res.redirect('/customers');
   });
 }
 
 function edit(req, res) {
   Customer.findById(req.params.id, function (err, customer) {
-    res.render('customers/edit', { customer: customer });
+    res.render('customers/edit', { 
+      customer: customer, 
+      user: req.user,
+    });
   });
 }
+
 
 function index(req, res) {
   Customer.find({}, function (err, customers) {
