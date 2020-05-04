@@ -10,6 +10,7 @@ const indexRoutes = require('./routes/index');
 const customersRoutes = require('./routes/customers');
 const foodsRoutes = require('./routes/foods');
 const menuRoutes = require('./routes/menu');
+const cateringRoutes = require('./routes/catering')
 const port = process.env.PORT || 3000;
 
 // Load the env vars
@@ -50,6 +51,7 @@ app.use('/', indexRoutes);
 app.use('/customers', customersRoutes);
 app.use('/foods', foodsRoutes);
 app.use('/menu', menuRoutes);
+app.use('/catering', cateringRoutes);
 
 // Tell app to listen
 app.listen(port, '0.0.0.0');
