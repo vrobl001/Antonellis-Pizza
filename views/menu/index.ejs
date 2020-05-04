@@ -12,7 +12,10 @@
         <li>Salads</li>
       </a>
       <a href="#pizzas">
-        <li>Pizza & Turnovers</li>
+        <li>Pizzas</li>
+      </a>
+      <a href="#turnovers">
+        <li>Turnovers</li>
       </a>
       <a href="#pastas">
         <li>Pastas</li>
@@ -20,8 +23,11 @@
       <a href="#wraps">
         <li>Wraps</li>
       </a>
-      <a href="#subs">
-        <li>Subs</li>
+      <a href="#cold-subs">
+        <li>Cold Subs</li>
+      </a>
+      <a href="#hot-subs">
+        <li>Hot Subs</li>
       </a>
       <a href="#sandwiches">
         <li>Sandwiches</li>
@@ -44,7 +50,7 @@
 
       <div class="menu-category-container">
         <h3 id="starters">STARTERS & SIDES</h3>
-        <% foods.forEach(food => { if(food.category === "Starters & Sides") { %>
+        <% foods.forEach(food => { if(food.category === "STARTERS & SIDES") { %>
         <h5><%= food.name %></h5>
         <p><%= food.price %></p>
         <p><%= food.description %></p>
@@ -64,8 +70,22 @@
         <p><%= food.description %></p>
         <% }}) %>
 
-        <h3 id="pizzas">PIZZA & TURNOVERS</h3>
-        <% foods.forEach(food => { if(food.category === "PIZZA & TURNOVERS") { %>
+        <h3>Dressings</h3>
+        <% foods.forEach(food => { if(food.category === "DRESSINGS") { %>
+        <h5><%= food.name %></h5>
+        <p><%= food.price %>¢</p>
+        <p><%= food.description %></p>
+        <% }}) %>
+
+        <h3 id="pizzas">PIZZA</h3>
+        <% foods.forEach(food => { if(food.category === "PIZZA") { %>
+        <h5><%= food.name %></h5>
+        <p><%= food.price %></p>
+        <p><%= food.description %></p>
+        <% }}) %>
+
+        <h3 id="turnovers">TURNOVERS</h3>
+        <% foods.forEach(food => { if(food.category === "TURNOVERS") { %>
         <h5><%= food.name %></h5>
         <p><%= food.price %></p>
         <p><%= food.description %></p>
@@ -85,8 +105,15 @@
         <p><%= food.description %></p>
         <% }}) %>
 
-        <h3 id="subs">SUBS</h3>
-        <% foods.forEach(food => { if(food.category === "SUBS") { %>
+        <h3 id="cold-subs">COLD SUBS</h3>
+        <% foods.forEach(food => { if(food.category === "COLD SUBS") { %>
+        <h5><%= food.name %></h5>
+        <p><%= food.price %></p>
+        <p><%= food.description %></p>
+        <% }}) %>
+
+        <h3 id="hot-subs">SUBS</h3>
+        <% foods.forEach(food => { if(food.category === "HOT SUBS") { %>
         <h5><%= food.name %></h5>
         <p><%= food.price %></p>
         <p><%= food.description %></p>
