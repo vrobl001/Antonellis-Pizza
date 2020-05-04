@@ -41,45 +41,14 @@
     </div>
     <div class="main-content menu">
       <h4>Menu</h4>
+
       <div class="menu-container">
         <h3 id="starters">Starters & Sides</h3>
-
-        <h5>Antonelli's Sampler</h5>
-        <p>13.99</p>
-        <p>
-          3 Buffalo wings, 3 mozzarella sticks, 3 jalapeño poppers, & 3 chicken
-          tenders
-        </p>
-
-        <h5>CHEESE BREAD STICKS</h5>
-        <p>5.99</p>
-        <p>
-          Sliced garlic bread covered with melted mozzarella cheese, & served
-          with a side of marinara dipping sauce. Add Pepperoni $1.00
-        </p>
-
-        <h5>BACON CHEESE FRIES</h5>
-        <p>6.49</p>
-        <p>
-          With bacon, mozzarella, cheddar cheese, & ranch dressing.
-        </p>
-
-        <h5>MOZZARELLA STICKS (6PCS)</h5>
-        <p>5.99</p>
-        <p>
-          With marinara sauce.
-        </p>
-
-        <h5>TEX MEX ROLLS (6PCS)</h5>
-        <p>6.49</p>
-        <p>
-          With bacon, mozzarella, cheddar cheese, & ranch dressing.
-        </p>
-        <h5>MOZZARELLA STICKS (6PCS)</h5>
-        <p>5.99</p>
-        <p>
-          With marinara sauce.
-        </p>
+        <% foods.forEach(food => { if(food.category === "Starters & Sides") { %>
+        <h5><%= food.name %></h5>
+        <p><%= food.price %></p>
+        <p><%= food.description %></p>
+        <% }}) %>
       </div>
     </div>
     <div class="menu-container intro">
