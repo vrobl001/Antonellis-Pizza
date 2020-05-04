@@ -12,8 +12,6 @@ router.get('/:id/edit', foodsCtrl.edit);
 router.put('/:id', foodsCtrl.update);
 
 // Delete
-router.delete('/:id', (req, res) => {
-  res.send('Delete Food Info ' + req.params.id);
-});
+router.delete('/:id', foodsCtrl.deleteFood);
 
 module.exports = router;
