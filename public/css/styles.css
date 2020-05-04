@@ -293,4 +293,41 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
+
+.new-food-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem auto;
+  padding: 2rem;
+  border: 1px solid #00713e;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0rem 0.1rem 0.25rem 0rem black;
+          box-shadow: 0rem 0.1rem 0.25rem 0rem black;
+  background-color: white;
+  width: 50rem;
+}
+
+.new-food-container h2 {
+  color: #00713e;
+  font-family: 'Baloo 2', cursive;
+}
+
+.new-food-container span {
+  margin: 1rem;
+}
+
+.new-food-container .button-container {
+  text-align: center;
+}
 /*# sourceMappingURL=styles.css.map */

@@ -221,3 +221,27 @@ $colors: (
     flex-direction: column;
   }
 }
+
+.new-food-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  padding: 2rem;
+  border: $border;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  background-color: white;
+  width: 50rem;
+  h2 {
+    color: color(green);
+    font-family: 'Baloo 2', cursive;
+  }
+  span {
+    margin: 1rem;
+  }
+  .button-container {
+    text-align: center;
+  }
+}
