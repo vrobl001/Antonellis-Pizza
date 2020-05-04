@@ -1,25 +1,57 @@
 <div class="app-outer-container">
-  <%- include('./partials/header') %>
+  <%- include('../partials/header') %>
   <div class="app-inner-container">
-    <h1>Foods Edit</h1>
-    <form action="/foods/{{ food.id }}?_method=PUT" method="POST">
-      <label
-        >Name:
-        <input type="text" name="name" placeholder="" value="" />
-      </label>
+    <h1><%= food.name %></h1>
+    <div class="new-food-container column">
+      <h2>Edit Food Info</h2>
+      <form action="/foods/<%= food._id %>?_method=PUT" method="POST">
+        <label class="col-12"
+          >Name:
+          <input type="text" name="name" placeholder="<%= food.name %>" />
+        </label>
 
-      <label
-        >Price:
-        <input type="text" name="price" placeholder="" value="" />
-      </label>
+        <label class="col-12"
+          >Category:
+          <select class="form-control" name="category">
+            <option value="<%= food.category %>"><%= food.category %></option>
+            <option value="STARTERS & SIDES">STARTERS & SIDES</option>
+            <option value="WINGS">WINGS</option>
+            <option value="SALADS">SALADS</option>
+            <option value="PIZZA & TURNOVERS">PIZZA & TURNOVERS</option>
+            <option value="PASTAS">PASTAS</option>
+            <option value="WRAPS">WRAPS</option>
+            <option value="SUBS">SUBS</option>
+            <option value="SANDWICHES">SANDWICHES</option>
+            <option value="KIDS">KIDS</option>
+            <option value="DESSERTS">DESSERTS</option>
+            <option value="BEVERAGES">BEVERAGES</option>
+            <option value="BEER & WINE">BEER & WINE</option>
+          </select>
+        </label>
 
-      <label
-        >Description:
-        <input type="text" name="description" placeholder="" value="" />
-      </label>
+        <label class="col-12"
+          >Price:
+          <input placeholder="<%= food.price %>" type="text" name="price" />
+        </label>
 
-      <input type="submit" value="Update Food Info" />
-    </form>
+        <label class="col-12"
+          >Description:
+          <input
+            placeholder="<%= food.description %>"
+            type="text"
+            name="description"
+          />
+        </label>
+
+        <label>
+          <input type="checkbox" name="catering" value="true" />
+          <span>Catering</span>
+        </label>
+        <div class="button-container">
+          <input class="btn btn-primary" type="submit" value="Submit Info" />
+        </div>
+      </form>
+    </div>
+    <%- include('../partials/footer') %>
   </div>
-  <%- include('./partials/footer') %>
 </div>
