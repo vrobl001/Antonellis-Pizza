@@ -3,17 +3,23 @@ const Schema = mongoose.Schema;
 
 const foodSchema = new Schema(
   {
-    name: String,
+    name: {
+      type: String,
+      required: true,
+    },
     category: {
       type: String,
       enum: [
         'STARTERS & SIDES',
         'WINGS',
         'SALADS',
-        'PIZZA & TURNOVERS',
+        'DRESSINGS',
+        'PIZZA', 
+        'TURNOVERS',
         'PASTAS',
         'WRAPS',
-        'SUBS',
+        'COLD SUBS',
+        'HOT SUBS',
         'SANDWICHES',
         'KIDS',
         'DESSERTS',
@@ -24,11 +30,10 @@ const foodSchema = new Schema(
     },
     price: {
       type: String,
-      required: true,
+
     },
     description: {
       type: String,
-      required: true,
     },
     catering: {
       type: Boolean,
