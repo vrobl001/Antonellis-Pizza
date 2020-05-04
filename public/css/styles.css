@@ -78,10 +78,18 @@
 }
 
 .navbar .upper-nav {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   height: 4rem;
+}
+
+.navbar .upper-nav .login-container {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 1rem;
 }
 
 .navbar .lower-nav {
@@ -374,5 +382,32 @@
           align-items: center;
   text-align: center;
   background-color: white;
+}
+
+.customer-index-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+}
+
+.customer-index-container h2 {
+  color: #00713e;
+  font-family: 'Baloo 2', cursive;
+}
+
+.customer-index-container .customer-container {
+  width: 100rem;
+  margin: 0 auto;
+  background-color: white;
+  -webkit-box-shadow: 0rem 0.1rem 0.25rem 0rem black;
+          box-shadow: 0rem 0.1rem 0.25rem 0rem black;
 }
 /*# sourceMappingURL=styles.css.map */

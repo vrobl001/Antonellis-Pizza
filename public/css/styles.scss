@@ -64,8 +64,13 @@ $colors: (
     align-items: center;
   }
   .upper-nav {
-    justify-content: space-between;
+    justify-content: flex-end;
     height: 4rem;
+    .login-container {
+      color: white;
+      display: flex;
+      margin-right: 1rem;
+    }
   }
   .lower-nav {
     justify-content: space-evenly;
@@ -276,5 +281,22 @@ $colors: (
       text-align: center;
       background-color: white;
     }
+  }
+}
+
+.customer-index-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: center;
+  h2 {
+    color: color(green);
+    font-family: 'Baloo 2', cursive;
+  }
+  .customer-container {
+    width: 100rem;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: $box-shadow;
   }
 }
