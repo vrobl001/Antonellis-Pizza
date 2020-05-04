@@ -1,64 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/public/css/style.css">
-    <title>Customers Edit</title>
-      <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">
-  <!-- Materialize Icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Materialize CSS Framework -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="/css/style.css" />
-  <!-- JavaScript for Materialize -->
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</head>
-<body>
-    <h1>Customers Edit</h1>
-    <form action="/<%=customer._id%>?_method=PUT" method="POST">
-      <label>Name:
-       <input type="text" name="name" placeholder="" value="<%=customer.name%>">
-      </label>
-      <label>E-mail:
-       <input type="text" name="email" placeholder="" value="<%=customer.email%>">
-      </label>
-      <label>Phone Number:
-       <input type="number" name="phone" placeholder="" value="<%=customer.phone%>">
-      </label>
-      <label>Address Name:
-       <input type="text" name="addressName" placeholder="" value="<%=customer.addressName%>">
-      </label>
-      <label>Address Type:
-        <select name="addressT" placeholder="" value="<%=customer.name%>">
-          <option value="Residence">Residence</option>
-          <option value="Business">Business</option>
-          <option value="Hotel">Hotel</option>
-          <option value="School">School</option>
-        </select>
-      </label>
-      <label>Address:
-       <input type="text" name="location" placeholder="" value="<%=customer.location%>">
-      </label>
-      <label>Apt/Suite:
-       <input type="text" name="apt" placeholder="" value="<%=customer.apt%>">
-      </label>
-      <label>City:
-       <input type="text" name="city" placeholder="" value="<%=customer.city%>">
-      </label>
-      <label>State:
-       <input type="text" name="state" placeholder="" value="<%=customer.state%>">
-      </label>
-      <label>Zip Code:
-       <input type="number" name="zip" placeholder="" value="<%=customer.zip%>">
-      </label>
-      <label>Delivery Notes:
-       <input type="text" name="deliveryNotes" placeholder="" value="<%=customer.deliveryNotes%>">
-      </label>
-      <input type="submit" value="Update Customer Info">
-    </form>
+<div class="app-outer-container">
+  <%- include('../partials/header') %>
+  <div class="app-inner-container">
+    <div class="form-container column">
+      <h2>Edit <%= customer.name %>'s Info</h2>
+      <form action="/customers/<%=customer._id%>?_method=PUT" method="POST">
+        <label>Name:
+         <input type="text" name="name" placeholder="" value="<%=customer.name%>">
+        </label>
+        <label>E-mail:
+         <input type="text" name="email" placeholder="" value="<%=customer.email%>">
+        </label>
+        <label>Phone Number:
+         <input type="number" name="phone" placeholder="" value="<%=customer.phone%>">
+        </label>
+        <label>Address Name:
+         <input type="text" name="addressName" placeholder="" value="<%=customer.addressName%>">
+        </label>
+        <label>Address Type:
+          <select class="form-control" name="addressT" placeholder="" value="<%=customer.name%>">
+            <option value="Residence">Residence</option>
+            <option value="Business">Business</option>
+            <option value="Hotel">Hotel</option>
+            <option value="School">School</option>
+          </select>
+        </label>
+        <label>Address:
+         <input type="text" name="location" placeholder="" value="<%=customer.location%>">
+        </label>
+        <label>Apt/Suite:
+         <input type="text" name="apt" placeholder="" value="<%=customer.apt%>">
+        </label>
+        <label>City:
+         <input type="text" name="city" placeholder="" value="<%=customer.city%>">
+        </label>
+        <label>State:
+         <input type="text" name="state" placeholder="" value="<%=customer.state%>">
+        </label>
+        <label>Zip Code:
+         <input type="number" name="zip" placeholder="" value="<%=customer.zip%>">
+        </label>
+        <label class="col-12">Delivery Notes:
+         <input type="text" name="deliveryNotes" placeholder="" value="<%=customer.deliveryNotes%>">
+        </label>
+        <div class="button-container">
+          <input class="btn btn-primary" type="submit" value="Update Info" />
+        </div>
+      </form>
+    </div>
 
-</body>
-</html>
+  </div>
+  <%- include('../partials/footer') %>
+  </div>
+  

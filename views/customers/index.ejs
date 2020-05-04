@@ -1,55 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/public/css/style.css">
-    <title>Customers Index</title>
-      <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">
-  <!-- Materialize Icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Materialize CSS Framework -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="/css/style.css" />
-  <!-- JavaScript for Materialize -->
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</head>
-<body>
-    <h1>Customers Index</h1>
-    <table>
-        <thead>
-            <th>Name</th>
-            <th>Phone Number</th>
-            <th>Sign-Up Date</th>
-            <th>Address Nickname</th>
-            <th>Address Type</th>
-            <th>Address</th>
-            <th>Apt</th>
-            <th>City</th>
-            <th>State</th>
-            <th>Zip Code</th>
-            <th>Delivery Notes</th>
-        </thead>
-        <tbody>
-            <% customers.forEach(customer => { %>
-                <tr>
-                    <td><%= customer.name %></td>
-                    <td><%= customer.phone %></td>
-                    <td><%= customer.signUpDate %></td>
-                    <td><%= customer.addressName %></td>
-                    <td><%= customer.addressT%></td>
-                    <td><%= customer.location%></td>
-                    <td><%= customer.apt%></td>
-                    <td><%= customer.city%></td>
-                    <td><%= customer.state%></td>
-                    <td><%= customer.zip%></td>
-                    <td><%= customer.deliveryNotes%></td>
-                    <!-- can put button to update with customer id -->
-                </tr>
-            <% }) %>
-        </tbody>
-    </table>
-</body>
-</html>
+<div class="app-outer-container">
+    <%- include('../partials/header') %>
+    <div class="app-inner-container customer-index-container">
+    <h2>Customers Index</h2>
+    <div class="customer-container">
+        <table class="table table-hover">
+            <thead class="thead-dark">
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Sign-Up Date</th>
+                <th>Address Nickname</th>
+                <th>Address Type</th>
+                <th>Address</th>
+                <th>Apt</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Zip Code</th>
+                <th>Delivery Notes</th>
+            </thead>
+            <tbody>
+                <% customers.forEach(customer => { %>
+                    <tr>
+                        <td><%= customer._id %></td>
+                        <td><%= customer.name %></td>
+                        <td><%= customer.phone %></td>
+                        <td><%= customer.signUpDate %></td>
+                        <td><%= customer.addressName %></td>
+                        <td><%= customer.addressT%></td>
+                        <td><%= customer.location%></td>
+                        <td><%= customer.apt%></td>
+                        <td><%= customer.city%></td>
+                        <td><%= customer.state%></td>
+                        <td><%= customer.zip%></td>
+                        <td><%= customer.deliveryNotes%></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+<%- include('../partials/footer') %>
+</div>
