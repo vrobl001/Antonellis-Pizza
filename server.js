@@ -44,7 +44,7 @@ app.use(methodOverride('_method'));
 
 // Mount Routes app.use()
 app.use('/', indexRoutes);
-app.use('/', customersRoutes);
+app.use('/customers', customersRoutes);
 app.use('/foods', foodsRoutes);
 app.use('/menu', menuRoutes);
 
