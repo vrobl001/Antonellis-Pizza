@@ -6,25 +6,31 @@ module.exports = {
   index,
   edit,
   update,
+  deleteFood,
 };
 
+function deleteFood(req, res) {
+  foodToBeDeleted = Food.findById(req.params.id);
+  Food.deleteOne(foodToBeDeleted, function (err, food) {
+    if (err) throw err;
+    console.log('food deleted');
+    res.redirect('/foods');
+  });
+}
+
 function update(req, res) {
-  Food.findById(req.params.id, function (err, food) {
-    food._id = req.params._id;
-    food.name = req.body.name;
-    food.category = req.body.name;
-    food.price = req.body.price;
-    food.description = req.body.description;
-    food.save(function (err) {
-      if (err) return res.redirect('foods/edit', { food: food, error: err });
-      res.render('foods/edit', { food: food });
-    });
+  food = Food.findById(req.params.id);
+  Food.updateOne(food, req.body, function (err, food) {
+    if (err) {
+      return res.redirect('/foods/:id/edit');
+    }
+    res.redirect('/foods');
   });
 }
 
 function edit(req, res) {
   Food.findById(req.params.id, function (err, food) {
-    res.render('foods/:id/edit', { food: food });
+    res.render('foods/edit', { food: food });
   });
 }
 
