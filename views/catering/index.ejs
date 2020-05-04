@@ -1,0 +1,102 @@
+<div class="app-outer-container">
+  <%- include('../partials/header') %>
+  <div class="app-inner-container menu-index">
+
+    <div class="main-content menu">
+      <h4>Catering Menu</h4>
+
+      <div class="menu-category-container">
+        <h3>STARTERS & SIDES</h3>
+        <% foods.forEach(food => { if(food.category === "STARTERS & SIDES") { %>
+        <h5><%= food.name %></h5>
+        <p><%= food.price %></p>
+        <p><%= food.description %></p>
+        <% }}) %>
+
+        <h3>WINGS</h3>
+        <% foods.forEach(food => { if(food.category === "WINGS") { %>
+        <h5><%= food.name %></h5>
+        <p><%= food.price %></p>
+        <p><%= food.description %></p>
+        <% }}) %>
+
+        <h3>SALADS</h3>
+        <% foods.forEach(food => { if(food.category === "SALADS") { %>
+        <h5><%= food.name %></h5>
+        <p><%= food.price %></p>
+        <p><%= food.description %></p>
+        <% }}) %>
+
+        <h3>SUBS/WRAPS</h3>
+        <% foods.forEach(food => { if(food.category === "WRAPS") { %>
+        <h5><%= food.name %></h5>
+        <p><%= food.price %></p>
+        <p><%= food.description %></p>
+        <% }}) %>
+
+        <h3>PIZZA</h3>
+        <% foods.forEach(food => { if(food.category === "PIZZA") { %>
+        <h5><%= food.name %></h5>
+        <p><%= food.price %></p>
+        <p><%= food.description %></p>
+        <% }}) %>
+
+        <h3>PASTAS</h3>
+        <% foods.forEach(food => { if(food.category === "PASTAS") { %>
+        <h5><%= food.name %></h5>
+        <p><%= food.price %></p>
+        <p><%= food.description %></p>
+        <% }}) %>
+        
+        <h3 id="beverages">BEVERAGES</h3>
+        <% foods.forEach(food => { if(food.category === "BEVERAGES") { %>
+        <h5><%= food.name %></h5>
+        <p><%= food.price %></p>
+        <p><%= food.description %></p>
+        <% }}) %>
+
+        <h3 id="desserts">DESSERTS</h3>
+        <% foods.forEach(food => { if(food.category === "DESSERTS") { %>
+        <h5><%= food.name %></h5>
+        <p><%= food.price %></p>
+        <p><%= food.description %></p>
+        <% }}) %>
+
+        </div>
+    </div>
+    <div class="menu-container intro">
+      <h3>Welcome to Antonelli's</h3>
+      <p>
+        Antonelli’s, a family owned & operated establishment which opened in
+        2007, prides itself in serving the finest meals using the freshest
+        ingredients always; some of which include extra virgin olive oil,
+        freshly sliced meats, romaine lettuce for all of our salads, and Grande©
+        cheese, the most expensive cheese in the market. In addition, we provide
+        our customers with very generous portions, and offer the superior
+        service that you may fail to receive when ordering from a chain. "From
+        our sauces, to pizza dough, to select dressings and desserts-all made
+        from scratch; we offer an exceptional tasting home-made meal that’s made
+        away from home."
+      </p>
+    </div>
+    <div class="menu-container column">
+      <h3>HOURS</h3>
+      <h4>Sun-Thurs: 11am-10pm</h4>
+      <h4>Fri & Sat: 11am-11pm</h4>
+      <ul>
+        <li>Last order 15 minutes before closing</li>
+        <li>$10.00 minimum for delivery</li>
+        <li>Delivery charge may apply</li>
+      </ul>
+    </div>
+    <div class="menu-container column">
+      <h3>Antonelli's would love to hear from you!</h3>
+      <p>
+        Please feel free to submit questions, compliments, suggestions, or
+        complaints to antonellis-pizza@hotmail.com
+      </p>
+      <h5>703-690-4500</h5>
+    </div>
+  </div>
+  <%- include('../partials/footer') %>
+</div>
