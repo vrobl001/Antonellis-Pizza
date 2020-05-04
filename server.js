@@ -3,6 +3,8 @@ const express = require('express');
 const logger = require('morgan');
 const session = require('express-session');
 const passport = require('passport');
+const favicon = require('serve-favicon');
+const path = require('path');
 const methodOverride = require('method-override');
 const indexRoutes = require('./routes/index');
 const customersRoutes = require('./routes/customers');
@@ -25,8 +27,9 @@ app.set('view engine', 'ejs');
 
 // Mount middleware app.use()
 app.use(logger('dev'));
-app.use(express.static('public'));
 app.use(express.json());
+app.use(express.static('public'));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(express.urlencoded({ extended: true }));
 
 app.use(
