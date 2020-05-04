@@ -202,8 +202,12 @@ $colors: (
   }
   .menu-nav-link {
     position: sticky;
-    top: 50;
-    width: 110rem;
+    top: 0;
+    height: 8rem;
+    width: 90rem;
+    li {
+      font-size: 1.25rem;
+    }
   }
   .intro {
     width: 75rem;
@@ -224,6 +228,10 @@ $colors: (
   }
   .menu-category-container {
     width: 80rem;
+    h3{
+      margin-top: 4rem;
+      margin-bottom: 5rem;
+    }
   }
 
 }
