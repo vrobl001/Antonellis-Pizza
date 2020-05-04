@@ -61,12 +61,18 @@
           <a href="/catering">
             <li class="button">Catering</li>
           </a>
-          <a href="/foods">
-            <li class="button">Edit Menu</li>
-          </a>
           <a href="/blog">
             <li class="button">Blog</li>
           </a>
+          <% if(user) { %>
+            <% if(user.email === "admin@email.com") {%>
+              <a href="/foods">
+                <li class="button">Edit Menu</li>
+              </a>
+              <a href="/customers">
+                <li class="button">Customers Index</li>
+              </a>
+          <% }} %>
         </div>
       </div>
 
