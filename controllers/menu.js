@@ -5,7 +5,7 @@ module.exports = {
 };
 
 function index(req, res) {
-  Food.find({}, function (err, foods) {
+  Food.find({"catering": false}, function (err, foods) {
     res.render('menu/index', {
       foods,
     });
