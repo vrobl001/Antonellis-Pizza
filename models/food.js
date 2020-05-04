@@ -30,7 +30,10 @@ const foodSchema = new Schema(
       type: String,
       required: true,
     },
-    catering: Boolean,
+    catering: {
+      type: Boolean,
+      default: false,
+    },
   },
   {
     timestamps: true,
