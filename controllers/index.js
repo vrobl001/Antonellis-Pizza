@@ -3,10 +3,11 @@ module.exports = {
     index
 }
 
+
+
 function index(req, res, next) {
     Customer.find({}, function(err, customers) {
-     res.render('customers/index', {
-      customers,
+     res.render('index', {
       user: req.user
       });
    })

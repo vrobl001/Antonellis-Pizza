@@ -18,21 +18,21 @@
 </head>
 <body>
     <h1>Customers Edit</h1>
-    <form action="/5e230ea82fc7c4077cc9c115?_method=PUT" method="POST">
+    <form action="/<%=customer._id%>?_method=PUT" method="POST">
       <label>Name:
-       <input type="text" name="name" placeholder="" value="">
+       <input type="text" name="name" placeholder="" value="<%=customer.name%>">
       </label>
       <label>E-mail:
-       <input type="text" name="email" placeholder="" value="">
+       <input type="text" name="email" placeholder="" value="<%=customer.email%>">
       </label>
       <label>Phone Number:
-       <input type="number" name="phone" placeholder="" value="">
+       <input type="number" name="phone" placeholder="" value="<%=customer.phone%>">
       </label>
       <label>Address Name:
-       <input type="text" name="addressName" placeholder="" value="">
+       <input type="text" name="addressName" placeholder="" value="<%=customer.addressName%>">
       </label>
       <label>Address Type:
-        <select name="addressT" placeholder="" value="">
+        <select name="addressT" placeholder="" value="<%=customer.name%>">
           <option value="Residence">Residence</option>
           <option value="Business">Business</option>
           <option value="Hotel">Hotel</option>
@@ -40,22 +40,22 @@
         </select>
       </label>
       <label>Address:
-       <input type="text" name="location" placeholder="" value="">
+       <input type="text" name="location" placeholder="" value="<%=customer.location%>">
       </label>
       <label>Apt/Suite:
-       <input type="text" name="apt" placeholder="" value="">
+       <input type="text" name="apt" placeholder="" value="<%=customer.apt%>">
       </label>
       <label>City:
-       <input type="text" name="city" placeholder="" value="">
+       <input type="text" name="city" placeholder="" value="<%=customer.city%>">
       </label>
       <label>State:
-       <input type="text" name="state" placeholder="" value="">
+       <input type="text" name="state" placeholder="" value="<%=customer.state%>">
       </label>
       <label>Zip Code:
-       <input type="number" name="zip" placeholder="" value="">
+       <input type="number" name="zip" placeholder="" value="<%=customer.zip%>">
       </label>
       <label>Delivery Notes:
-       <input type="text" name="deliveryNotes" placeholder="" value="">
+       <input type="text" name="deliveryNotes" placeholder="" value="<%=customer.deliveryNotes%>">
       </label>
       <input type="submit" value="Update Customer Info">
     </form>

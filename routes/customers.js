@@ -7,10 +7,14 @@ router.get('/', customersCtrl.index);
 router.get('/new', customersCtrl.new);
 router.post('/customers', customersCtrl.create);
 router.get('/customers', isLoggedIn, customersCtrl.index);
+router.post('/', customersCtrl.create);
+
 
 // Update
-router.get('/:id/edit', customersCtrl.edit); //isLoggedIn
-router.put('/:id', customersCtrl.update);
+router.put('/:id', isLoggedIn, customersCtrl.update);
+router.get('/:id/edit', isLoggedIn,  customersCtrl.edit); 
+
+
 
 // Delete
 router.delete('/:id', (req, res) => {
