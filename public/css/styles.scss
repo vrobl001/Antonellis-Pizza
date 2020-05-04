@@ -196,7 +196,7 @@ $colors: (
   }
   .menu-nav-link {
     position: sticky;
-    top: 130;
+    top: 135;
     width: 100rem;
   }
   .intro {
@@ -217,16 +217,16 @@ $colors: (
     background-color: white;
   }
 
-  .column {
-    flex-direction: column;
-  }
 }
 
-// new food page
-.new-food-container {
+.column {
+  flex-direction: column;
+}
+
+// form container
+.form-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   margin: 1rem auto;
   padding: 2rem;
@@ -236,6 +236,7 @@ $colors: (
   background-color: white;
   width: 50rem;
   h2 {
+    text-align: center;
     color: color(green);
     font-family: 'Baloo 2', cursive;
   }
@@ -254,9 +255,22 @@ $colors: (
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  margin: 0 auto;
+  flex-grow: 1;
   background-color: pink;
-  table {
-    background-color: white;
+  h2 {
+    color: color(green);
+    font-family: 'Baloo 2', cursive;
+  }
+  .food-index-table {
+    text-align: center;
+    width: 50rem;
+    table {
+      margin: 1rem;
+      box-shadow: $box-shadow;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: white;
+    }
   }
 }

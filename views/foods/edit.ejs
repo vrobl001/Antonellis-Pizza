@@ -1,9 +1,8 @@
 <div class="app-outer-container">
   <%- include('../partials/header') %>
   <div class="app-inner-container">
-    <h1><%= food.name %></h1>
-    <div class="new-food-container column">
-      <h2>Edit Food Info</h2>
+    <div class="form-container column">
+      <h2>Edit <%= food.name %> Info</h2>
       <form action="/foods/<%= food._id %>?_method=PUT" method="POST">
         <label class="col-12"
           >Name:
@@ -52,6 +51,6 @@
         </div>
       </form>
     </div>
-    <%- include('../partials/footer') %>
   </div>
+  <%- include('../partials/footer') %>
 </div>
