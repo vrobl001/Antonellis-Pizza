@@ -37,7 +37,16 @@
         <a href="/" class="brand-logo">
           <img src="/images/brand_logo.png"></a>
         </a>
-
+      
+              <li><a href="<%=user%>/edit">Edit Account info</a></li>
+              <li>
+              <% if (user) { %>
+                  <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
+              <% } else { %>
+                  <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+              <% } %>
+              </li>
+  
       </div>
 
       <div class="lower-nav">
