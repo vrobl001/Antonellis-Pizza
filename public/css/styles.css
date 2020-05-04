@@ -193,6 +193,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   background-color: #912a2b;
   text-align: center;
   -webkit-box-pack: center;
@@ -257,21 +258,21 @@
 .menu-index .menu-nav-link {
   position: -webkit-sticky;
   position: sticky;
-  top: 135;
-  width: 100rem;
+  top: 50;
+  width: 107rem;
 }
 
 .menu-index .intro {
   width: 75rem;
 }
 
-.menu-index .menu-container {
+.menu-index .menu-container, .menu-index .menu-category-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 1rem;
+  margin: 1rem auto;
   padding: 1rem;
   border: 1px solid #00713e;
   border-radius: 1rem;
@@ -285,6 +286,10 @@
           align-items: center;
   text-align: center;
   background-color: white;
+}
+
+.menu-index .menu-category-container {
+  width: 80rem;
 }
 
 .column {

@@ -42,14 +42,92 @@
     <div class="main-content menu">
       <h4>Menu</h4>
 
-      <div class="menu-container">
-        <h3 id="starters">Starters & Sides</h3>
+      <div class="menu-category-container">
+        <h3 id="starters">STARTERS & SIDES</h3>
         <% foods.forEach(food => { if(food.category === "Starters & Sides") { %>
         <h5><%= food.name %></h5>
         <p><%= food.price %></p>
         <p><%= food.description %></p>
         <% }}) %>
-      </div>
+
+        <h3 id="wings">WINGS</h3>
+        <% foods.forEach(food => { if(food.category === "WINGS") { %>
+        <h5><%= food.name %></h5>
+        <p><%= food.price %></p>
+        <p><%= food.description %></p>
+        <% }}) %>
+
+        <h3 id="salads">SALADS</h3>
+        <% foods.forEach(food => { if(food.category === "SALADS") { %>
+        <h5><%= food.name %></h5>
+        <p><%= food.price %></p>
+        <p><%= food.description %></p>
+        <% }}) %>
+
+        <h3 id="pizzas">PIZZA & TURNOVERS</h3>
+        <% foods.forEach(food => { if(food.category === "PIZZA & TURNOVERS") { %>
+        <h5><%= food.name %></h5>
+        <p><%= food.price %></p>
+        <p><%= food.description %></p>
+        <% }}) %>
+   
+        <h3 id="pastas">PASTAS</h3>
+        <% foods.forEach(food => { if(food.category === "PASTAS") { %>
+        <h5><%= food.name %></h5>
+        <p><%= food.price %></p>
+        <p><%= food.description %></p>
+        <% }}) %>
+
+        <h3 id="wraps">WRAPS</h3>
+        <% foods.forEach(food => { if(food.category === "WRAPS") { %>
+        <h5><%= food.name %></h5>
+        <p><%= food.price %></p>
+        <p><%= food.description %></p>
+        <% }}) %>
+
+        <h3 id="subs">SUBS</h3>
+        <% foods.forEach(food => { if(food.category === "SUBS") { %>
+        <h5><%= food.name %></h5>
+        <p><%= food.price %></p>
+        <p><%= food.description %></p>
+        <% }}) %>
+ 
+        <h3 id="sandwiches">SANDWICHES</h3>
+        <% foods.forEach(food => { if(food.category === "SANDWICHES") { %>
+        <h5><%= food.name %></h5>
+        <p><%= food.price %></p>
+        <p><%= food.description %></p>
+        <% }}) %>
+
+        <h3 id="kids">KIDS</h3>
+        <% foods.forEach(food => { if(food.category === "KIDS") { %>
+        <h5><%= food.name %></h5>
+        <p><%= food.price %></p>
+        <p><%= food.description %></p>
+        <% }}) %>
+
+        <h3 id="desserts">DESSERTS</h3>
+        <% foods.forEach(food => { if(food.category === "DESSERTS") { %>
+        <h5><%= food.name %></h5>
+        <p><%= food.price %></p>
+        <p><%= food.description %></p>
+        <% }}) %>
+
+        <h3 id="beverages">BEVERAGES</h3>
+        <% foods.forEach(food => { if(food.category === "BEVERAGES") { %>
+        <h5><%= food.name %></h5>
+        <p><%= food.price %></p>
+        <p><%= food.description %></p>
+        <% }}) %>
+
+        <h3 id="beer">BEER & WINE</h3>
+        <% foods.forEach(food => { if(food.category === "BEER & WINE") { %>
+        <h5><%= food.name %></h5>
+        <p><%= food.price %></p>
+        <p><%= food.description %></p>
+        <% }}) %>
+
+        </div>
     </div>
     <div class="menu-container intro">
       <h3>Welcome to Antonelli's</h3>

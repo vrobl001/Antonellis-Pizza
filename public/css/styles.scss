@@ -150,6 +150,7 @@ $colors: (
 // footer
 .footer {
   display: flex;
+  width: 100%;
   background-color: color(red);
   text-align: center;
   justify-content: center;
@@ -196,17 +197,17 @@ $colors: (
   }
   .menu-nav-link {
     position: sticky;
-    top: 135;
-    width: 100rem;
+    top: 50;
+    width: 107rem;
   }
   .intro {
     width: 75rem;
   }
 
-  .menu-container {
+  .menu-container, .menu-category-container {
     display: flex;
     flex-wrap: wrap;
-    margin: 1rem;
+    margin: 1rem auto;
     padding: 1rem;
     border: $border;
     border-radius: $border-radius;
@@ -215,6 +216,9 @@ $colors: (
     align-items: center;
     text-align: center;
     background-color: white;
+  }
+  .menu-category-container {
+    width: 80rem;
   }
 
 }
