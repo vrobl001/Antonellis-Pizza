@@ -1,4 +1,5 @@
 const Food = require('../models/food');
+const Customer = require('../models/customer');
 
 module.exports = {
   new: newFood,
@@ -30,7 +31,10 @@ function update(req, res) {
 
 function edit(req, res) {
   Food.findById(req.params.id, function (err, food) {
-    res.render('foods/edit', { food: food });
+    res.render('foods/edit', { 
+      food,
+      user: req.user,
+    });
   });
 }
 
@@ -46,13 +50,17 @@ function create(req, res) {
 }
 
 function newFood(req, res) {
-  res.render('foods/new', { title: 'Add Food' });
+  res.render('foods/new', { 
+    title: 'Add Food',
+    user: req.user,
+   });
 }
 
 function index(req, res) {
   Food.find({}, function (err, foods) {
     res.render('foods/index', {
       foods,
+      user: req.user,
     });
   });
 }
