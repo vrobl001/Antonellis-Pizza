@@ -222,6 +222,7 @@ $colors: (
   }
 }
 
+// new food page
 .new-food-container {
   display: flex;
   flex-direction: column;
@@ -243,5 +244,19 @@ $colors: (
   }
   .button-container {
     text-align: center;
+  }
+}
+
+//foods index container
+
+.foods-index-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  margin: 0 auto;
+  background-color: pink;
+  table {
+    background-color: white;
   }
 }
