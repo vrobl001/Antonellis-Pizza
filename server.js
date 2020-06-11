@@ -11,6 +11,7 @@ const customersRoutes = require('./routes/customers');
 const foodsRoutes = require('./routes/foods');
 const menuRoutes = require('./routes/menu');
 const cateringRoutes = require('./routes/catering')
+const blogRoutes = require('./routes/blog')
 const port = process.env.PORT || 3000;
 
 // Load the env vars
@@ -52,6 +53,7 @@ app.use('/customers', customersRoutes);
 app.use('/foods', foodsRoutes);
 app.use('/menu', menuRoutes);
 app.use('/catering', cateringRoutes);
+app.use('/blogs', blogRoutes);
 
 // Tell app to listen
 app.listen(port, '0.0.0.0');

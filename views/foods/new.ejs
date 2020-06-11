@@ -2,48 +2,34 @@
   <%- include('../partials/header') %>
   <div class="app-inner-container">
     <div class="form-container">
-      <h2>Enter Food Info</h2>
-      <form action="/foods" method="POST">
+      <h2>Create a Blog Post</h2>
+      <form action="/blog" method="POST">
         <label class="col-12"
           >Name:
           <input type="text" name="name" />
         </label>
 
         <label class="col-12"
-          >Category:
-          <select class="form-control" name="category">
-            <option value="STARTERS & SIDES">STARTERS & SIDES</option>
-            <option value="WINGS">WINGS</option>
-            <option value="SALADS">SALADS</option>
-            <option value="DRESSINGS">DRESSINGS</option>
-            <option value="PIZZA">PIZZA</option>
-            <option value="TURNOVERS">TURNOVERS</option>
-            <option value="PASTAS">PASTAS</option>
-            <option value="WRAPS">WRAPS</option>
-            <option value="COLD SUBS">COLD SUBS</option>
-            <option value="HOT SUBS">HOT SUBS</option>
-            <option value="SANDWICHES">SANDWICHES</option>
-            <option value="KIDS">KIDS</option>
-            <option value="DESSERTS">DESSERTS</option>
-            <option value="BEVERAGES">BEVERAGES</option>
-            <option value="BEER & WINE">BEER & WINE</option>
-          </select>
+          >Description:
+          <input type="text" name="description" />
         </label>
-
         <label class="col-12"
-          >Price:
-          <input type="text" name="price" />
+          >Description:
+          <input type="text" name="description" />
         </label>
-
+        <label class="col-12"
+          >Description:
+          <input type="text" name="description" />
+        </label>
+        <label class="col-12"
+          >Description:
+          <input type="text" name="description" />
+        </label>
         <label class="col-12"
           >Description:
           <input type="text" name="description" />
         </label>
 
-        <label>
-          <input type="checkbox" name="catering" value="true" />
-          <span>Catering</span>
-        </label>
         <div class="button-container">
           <input class="btn btn-primary" type="submit" value="Submit Info" />
         </div>
